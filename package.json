@@ -1,0 +1,24 @@
+{
+  "name": "CAPS",
+  "version": "1.0.0",
+  "description": "",
+  "main": "caps.js",
+  "scripts": {
+    "test": "jest --coverage --verbose"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mooream2291/CAPS.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mooream2291/CAPS/issues"
+  },
+  "homepage": "https://github.com/mooream2291/CAPS#readme",
+  "dependencies": {
+    "faker": "^5.1.0",
+    "jest": "^26.6.3"
+  }
+}
