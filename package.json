@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/mooream2291/CAPS#readme",
   "dependencies": {
+    "dotenv": "^8.2.0",
     "faker": "^5.1.0",
     "jest": "^26.6.3"
   }

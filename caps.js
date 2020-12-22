@@ -9,7 +9,7 @@ require('./vendor');
 
 //vendor alerts driver that a package needs to be picked up
 function logger (event, payload) {
-    timeStamp = Math.floor(Date.now() / 1000);
+    let timeStamp = Date.now().toString();
     console.log(event, timeStamp, payload);
 }
 //driver gets notified that a package needs to be picked up
