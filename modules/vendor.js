@@ -1,22 +1,15 @@
 //vendor module
 //dependencies
 const faker = require('faker');
-const events = require('./events');
-const name = require(process.env.STORE_NAME);
-//use faker
-app.use(faker);
-//faker objects
-const randomName = (faker.name.lastName(), faker.name.firstName());
-const randomOrderId = faker.random.number();
-const randomCity = (faker.address.city(), faker.address.state(), faker.address.zipCode()); 
+const events = require('./events');;
 //sets a 5 sec time lapse to send an event notification
 setInterval(()=> {
 //object using faker vars to pass a fake order
     let payload = {
-        storeName: name,
-        orderId: randomOrderId,
-        customerName: randomName,
-        city: randomCity
+        storeName: process.env.STORE_NAME,
+        orderId: faker.random.uuid(),
+        customerName: `${faker.name.firstName()} ${faker.name.lastName()}`,
+        city: `${faker.address.city()} ${faker.address.stateAbbr()} ${faker.address.zipCode()}`
     }
 //triggers pick-up notification to be sent to the driver
     events.emit('pick-up', payload);
